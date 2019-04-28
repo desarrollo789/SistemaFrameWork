@@ -20,31 +20,52 @@ class News extends CI_Controller {
 
         public function view($slug = NULL)
         {
+                $this->load->helper('form');
+                $this->load->library('form_validation');                
+                
                 $data['news_item'] = $this->news_model->get_news($slug);
-
-                if (empty($data['news_item']))
-                {
-                        show_404();
-                }
-
                 $data['title'] = $data['news_item']['title'];
+                $data['message'] = 'Update element done';
 
-                $this->load->view('templates/header', $data);
-                $this->load->view('news/view', $data);
-                $this->load->view('templates/footer');
-        }
+                $this->form_validation->set_rules('title', 'Title', 'required');
+                $this->form_validation->set_rules('text', 'Text', 'required');
+                $this->form_validation->set_rules('id', 'Id', 'required');
+                        
+
+                if ($this->form_validation->run() == FALSE)
+                {
+                        $this->load->view('templates/header', $data);
+                        $this->load->view('news/view', $data);
+                        $this->load->view('templates/footer');
+                }
+                               
+                if(isset($_POST['submitupdate'])) 
+                { 
+                        $this->news_model->update_news();
+                        $this->load->view('news/success', $data);
+                } 
+
+                else if(isset($_POST['submitdelete'])) 
+                { 
+                        $this->news_model->delete_news();
+                        $this->load->view('news/success', $data);
+                }           
+        }        
         
+        
+
         public function create()
         {
                 $this->load->helper('form');
                 $this->load->library('form_validation');
 
                 $data['title'] = 'Create a news item';
+                $data['message'] = 'Create element done';
 
                 $this->form_validation->set_rules('title', 'Title', 'required');
                 $this->form_validation->set_rules('text', 'Text', 'required');
 
-                if ($this->form_validation->run() === FALSE)
+                if ($this->form_validation->run() == FALSE)
                 {
                         $this->load->view('templates/header', $data);
                         $this->load->view('news/create');
@@ -54,7 +75,7 @@ class News extends CI_Controller {
                 else
                 {
                         $this->news_model->set_news();
-                        $this->load->view('news/success');
+                        $this->load->view('news/success', $data);
                 }
         }
 }

@@ -1,3 +1,3 @@
 <html>
-    <p>el form se a cargado.</p>
+    <p><?php echo $message ?></p>
 </html>
