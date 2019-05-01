@@ -8,7 +8,7 @@ class News_model extends CI_Model {
 
         public function get_news($slug = FALSE)
         {
-                if ($slug === FALSE)
+                if ($slug == FALSE)
                 {
                         $this->db->order_by('id', 'ASC');
                         $query = $this->db->get('news');                        
