@@ -237,7 +237,7 @@
 
 					</div>
 					<center>
-						<button style="margin-top: 10px;background-color: #313131;" type="button" class="btn primary-btn">aceptar</button>
+						<button style="margin-top: 10px;background-color: #313131;" type="button" class="btn primary-btn" data-toggle="modal" data-target="#Factura">aceptar</button>
 						<a href="ListaProductos.html"><button style="margin-top: 10px;background-color: #313131;" type="button" class="btn primary-btn">Ver mas Productos</button></a>
 					</center>
 					<!-- /shop -->
@@ -347,6 +347,63 @@
 		            <input class="input" type="Password" name="first-name" placeholder="Password">
 		          </div>
 		        </form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn" style="background-color: #313131; color: white" data-dismiss="modal">Cancelar</button>
+		        <button type="button" class="btn btn-danger">Aceptar</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
+		<!-- Modal Factura-->
+		<div class="modal fade" id="Factura" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title" id="exampleModalCenterTitle">Confirmacion de Compra</h3>
+		        
+		      </div>
+		      <div class="modal-body">
+		      	<!-- Order Details -->
+					<div>
+						<div class="order-summary">
+							<h4 style="text-align: center;">Datos de Usuario</h4>
+							<div class="order-products">
+								<div class="order-col">
+									<div style="width: 300px; text-align: left;font-weight: bold;">Nit: <input style="width: 50%; font-size: 15px; text-decoration: none;" class="input" type="number" name="Precio" min="0" max="99999999"></div>
+								</div>
+								<div class="order-col">
+									<div style="width: 300px; text-align: left;font-weight: bold;">Nombre: <label style="font-weight: normal;">Juan Carlos</label></div>
+								</div>
+								<div class="order-col">
+									<div style="width: 300px; text-align: left;font-weight: bold;">Apellido: <label style="font-weight: normal;">Torrez Morales</label></div>
+								</div>
+							</div>
+
+							<h4 style="text-align: center;">Datos del Producto</h4>
+							<div class="order-products">
+								<div class="order-col">
+									<div style="font-weight: bold;">Fecha de Venta: </div>
+									<div style="text-align: left;font-weight: bold;"><label style="font-weight: normal;">07-05-05</label></div>
+									<div style="text-align: left;"></div>
+								</div>
+								<div class="order-col">
+									<div style="font-weight: bold;">Equipo: </div>
+									<div style="text-align: center;font-weight: bold;"><label style="font-weight: normal;">Modelo HP 2017</label></div>
+									<div style="text-align: left; font-weight: bold;">Cantidad: <label style="font-weight: normal;"> 1</label></div>
+								</div>
+							</div>
+							<div class="order-col">
+								<div><strong>TOTAL</strong></div>
+								<div><strong class="order-total"><label>1200</label> Bs</strong></div>
+							</div>
+						</div>
+					</div>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn" style="background-color: #313131; color: white" data-dismiss="modal">Cancelar</button>

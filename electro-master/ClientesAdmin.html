@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Descripcion</title>
+		<title>clientes</title>
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
@@ -49,6 +49,14 @@
                         <li><h4><button  style="color: white; list-style: none;" type="button" class="fa fa-user-o btn-link" data-toggle="modal" data-target="#exampleModalCenter">Iniciar Cesion</button></h4></li>
                     </ul>
                 </div>
+                <div class="container">
+                    <ul class="header-links pull-right">
+                        <button  style="color: white;" type="button" class="btn-link">Vista Administrador</button>
+                    </ul>
+                    <ul class="header-links pull-right">
+                        <button  style="color: white;" type="button" class="btn-link" >Vista Cliente</button>
+                    </ul>
+                </div>
             </div>
             <!-- /TOP HEADER -->
 
@@ -61,27 +69,20 @@
 						<!-- LOGO -->
                         <div class="col-md-3">
                             <div class="header-logo">
-                                <a href="#" class="logo">
+                                <a href="indexAdmin.html" class="logo">
                                     <h2 style="color: white">Compu Mundo Iper Mega Red</h2>
                                 </a>
                             </div>
                         </div>
                         <!-- /LOGO -->
 
-                        <!-- ACCOUNT -->
-                        <div class="col-md-3 clearfix pull-right">
-                            <div class="header-ctn">
-                                <!-- Wishlist 
-                                <div>
-                                    <a href="#">
-                                        <i class="fa fa-heart-o"></i>
-                                        <span>Your Wishlist</span>
-                                        <div class="qty">2</div>
-                                    </a>
-                                </div>
-                                /Wishlist -->
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix pull-right">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<!-- /Wishlist -->
 
-                                <!-- Cart -->
+								<!-- Cart -->
                                 <div class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                                         <i class="fa fa-shopping-cart"></i>
@@ -118,99 +119,90 @@
                                         </div>
                                         <div class="cart-btns">
                                             <a href="#">Confirmar</a>
-                                            <a href="Carrito.html">Ver Carrito  <i class="fa fa-arrow-circle-right"></i></a>
+                                            <a href="Carrito.html">Ver Carrito <i class="fa fa-arrow-circle-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /Cart -->
 
-                                <!-- Menu Toogle -->
-                                <div class="menu-toggle">
-                                    <a href="#">
-                                        <i class="fa fa-bars"></i>
-                                        <span>Menu</span>
-                                    </a>
-                                </div>
-                                <!-- /Menu Toogle -->
-                            </div>
-                        </div>
-                        <!-- /ACCOUNT -->
+								<!-- Menu Toogle -->
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Menu</span>
+									</a>
+								</div>
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
 					</div>
 					<!-- row -->
 				</div>
 				<!-- container -->
-            </div>
+			</div>
 			<!-- /MAIN HEADER -->
 		</header>
-        <!-- /HEADER -->
+		<!-- /HEADER -->
 
-        <!-- NAVIGATION -->
-        <nav id="navigation">
-            <!-- container -->
-            <div class="container">
-                <!-- responsive-nav -->
-                <div id="responsive-nav">
-                    <!-- NAV -->
-                    <ul class="main-nav nav navbar-nav">
-                        <li><a href="index.html">INICIO</a></li>
-                        <li><a href="ListaProductos.html">LISTA DE PORTATILES</a></li>
-                    </ul>
-                    <!-- /NAV -->
-                </div>
-                <!-- /responsive-nav -->
-            </div>
-            <!-- /container -->
-        </nav>
-        <!-- /NAVIGATION -->s
-
-
+		<!-- NAVIGATION -->
+		<nav id="navigation">
+			<!-- container -->
+			<div class="container">
+				<!-- responsive-nav -->
+				<div id="responsive-nav">
+					<!-- NAV -->
+					<ul class="main-nav nav navbar-nav">
+                        <li><a href="indexAdmin.html"><h3>INICIO</h3> </a></li>
+                        <li><a href="ListaProductosAdmin.html"><h3>PRODUCTOS</h3></a></li>
+						<li class="active" ><a href="Usuario.html"><h3>USUARIOS</h3></a></li>
+						<li><a href="#"><h3>FACTURAS</h3></a></li>
+					</ul>
+					<!-- /NAV -->
+				</div>
+				<!-- /responsive-nav -->
+			</div>
+			<!-- /container -->
+		</nav>
+        <!-- /NAVIGATION -->
         <!-- SECTION -->
-        <div class="section">
-            <!-- container -->
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <!-- Product main img -->
-                    <div class="col-md-5 col-md-push-2">
-                        <div id="product-main-img">
-                            <div class="product-preview">
-                                <img src="./img/product01.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Product main img -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
 
-                    <!-- Product thumb imgs -->
-                    <div class="col-md-2  col-md-pull-5">
-                        
-                    </div>
-                    <!-- /Product thumb imgs -->
+					<!-- Order Details -->
+					<div class="col-md-12 order-details">
+						<div class="section-title text-center">
+							<h3 class="title">LISTA DE CLIENTES</h3>
+						</div>
+						<div class="order-summary">
+							<div class="order-col" style="border: solid;">
+								<div><strong>Nombre</strong></div>
+                                <div><strong>Apellido</strong></div>
+                                <div><strong>Direccion</strong></div>
+                                <div><strong>Correo</strong></div>
+                                <div><strong>Password</strong></div>
+							</div>
+							<div class="order-col" style="width: 100%">
+                                <div><strong>Juan Carlos</strong></div>
+                                <div><strong>Apellido</strong></div>
+                                <div><strong>Direccion</strong></div>
+                                <div><strong>Correo</strong></div>
+                                <div><strong>Password</strong></div>
+							</div>
+						</div>
+					</div>
+					<!-- /Order Details -->
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /SECTION -->
 
-                    <!-- Product details -->
-                    <div class="col-md-4" style="padding-top: 50px">
-                        <div class="product-details">
-                            <h2 class="product-name">DELL Modelo 2015</h2>
-                            <div>
-                                <h3 class="product-price"><label>980.00</label> Bs </h3>
-                            </div>
-                            <h3>Caracteristicas</h3>
-                            <p style="font-weight: bold;">PANTALLA: <label>16</label> Pulg</p>
-                            <p style="font-weight: bold;">RESOLUCION: <label>1200x800</label></p>
-                            <p style="font-weight: bold;">PESO: <label>150</label> Kg</p>
-                            <p style="font-weight: bold;">RAM: <label>4</label> Gb</p>
-                            <p style="font-weight: bold;" style="font-weight: bold;">MEMORIA: <label>1000</label> Gb</p>
-                            <p style="font-weight: bold;">TARGETA GRAFICA: <label>INVIDIA</label></p>
-                       </div>
-                    </div>
-                    <!-- /Product details -->
-                </div>
-                <!-- /row -->
-            </div>
-            <!-- /container -->
-        </div>
-        <!-- /SECTION -->
-
-        <!-- NEWSLETTER -->
+		<!-- NEWSLETTER -->
         <div id="newsletter" class="section">
             <!-- container -->
             <div class="container">
@@ -237,7 +229,9 @@
             <!-- /container -->
         </div>
         <!-- /NEWSLETTER -->
-        <!-- FOOTER -->
+
+
+		<!-- FOOTER -->
         <footer id="footer">
             <!-- top footer -->
             
@@ -271,7 +265,6 @@
             <!-- /bottom footer -->
         </footer>
         <!-- /FOOTER -->
-
 		<!-- jQuery Plugins -->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
